@@ -1,13 +1,13 @@
 package com.diy.app.lecture;
 
-import com.diy.framework.web.render.ModelAndView;
+import com.diy.framework.web.mvc.controller.Controller;
+import com.diy.framework.web.mvc.ModelAndView;
+import com.diy.framework.web.mvc.model.Model;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 
 public class LectureController implements Controller{
     private final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
@@ -27,8 +27,8 @@ public class LectureController implements Controller{
     }
 
     protected ModelAndView doGet(HttpServletRequest req, HttpServletResponse resp) {
-        Map<String, Object> model = new HashMap<>();
-        model.put("lectures", lectureRepository.findAll());
+        Model model = new Model();
+        model.addAttribute("lectures", lectureRepository.findAll());
         return new ModelAndView("lecture-list", model);
     }
 
