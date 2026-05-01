@@ -1,11 +1,11 @@
-package com.diy.framework.web;
+package com.diy.framework.web.servlet;
 
-import com.diy.app.lecture.Controller;
 import com.diy.app.lecture.LectureController;
-import com.diy.framework.web.render.ModelAndView;
-import com.diy.framework.web.render.view.View;
-import com.diy.framework.web.render.resolver.ViewResolver;
-import com.diy.framework.web.render.resolver.ViewResolverFactory;
+import com.diy.framework.web.mvc.controller.Controller;
+import com.diy.framework.web.mvc.ModelAndView;
+import com.diy.framework.web.mvc.view.View;
+import com.diy.framework.web.mvc.view.ViewResolver;
+import com.diy.framework.web.mvc.view.ViewResolverFactory;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;

@@ -1,4 +1,4 @@
-package com.diy.framework.web.render.view;
+package com.diy.framework.web.mvc.view;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -9,7 +9,7 @@ public class RedirectView implements View {
     private final String viewName;
 
     public RedirectView(final String viewName) {
-        this.viewName = viewName.replace("redirect:", "");
+        this.viewName = viewName;
     }
 
     @Override

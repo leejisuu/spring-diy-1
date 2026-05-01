@@ -1,20 +1,21 @@
-package com.diy.framework.web.render;
+package com.diy.framework.web.mvc;
 
-import java.util.Collections;
-import java.util.HashMap;
+import com.diy.framework.web.mvc.model.Model;
+
 import java.util.Map;
 
 public class ModelAndView {
     private final String viewName;
-    private final Map<String, Object> model = new HashMap<>();
+    private final Model model;
 
     public ModelAndView(final String viewName) {
         this.viewName = viewName;
+        this.model = new Model();
     }
 
-    public ModelAndView(final String viewName, final Map<String, Object> model) {
+    public ModelAndView(final String viewName, final Model model) {
         this.viewName = viewName;
-        this.model.putAll(model);
+        this.model = model;
     }
 
     public String getViewName() {
@@ -22,6 +23,6 @@ public class ModelAndView {
     }
 
     public Map<String, Object> getModel() {
-        return Collections.unmodifiableMap(this.model);
+        return model.getAttribute();
     }
 }
