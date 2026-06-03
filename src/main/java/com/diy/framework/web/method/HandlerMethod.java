@@ -1,6 +1,6 @@
 package com.diy.framework.web.method;
 
-import com.diy.framework.web.mvc.ModelAndView;
+import com.diy.framework.web.mvc.view.ModelAndView;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;

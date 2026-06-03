@@ -2,7 +2,7 @@ package com.diy.app.lecture;
 
 import com.diy.framework.context.annotation.Autowired;
 import com.diy.framework.web.mvc.controller.Controller;
-import com.diy.framework.web.mvc.ModelAndView;
+import com.diy.framework.web.mvc.view.ModelAndView;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.http.HttpServletRequest;

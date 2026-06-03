@@ -1,6 +1,6 @@
 package com.diy.framework.web.mvc.controller;
 
-import com.diy.framework.web.mvc.ModelAndView;
+import com.diy.framework.web.mvc.view.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
